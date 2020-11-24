@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://dialogue/Dialogue.gd" type="Script" id=1]
+
+[node name="PopupDialog" type="PopupDialog"]
+pause_mode = 2
+anchor_right = 0.243
+anchor_bottom = 0.194
+margin_right = -155.52
+margin_bottom = -69.84
+popup_exclusive = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 200.0
+margin_bottom = 41.0
+color = Color( 0.960784, 1, 0.905882, 1 )
