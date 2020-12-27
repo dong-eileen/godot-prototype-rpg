@@ -4,17 +4,45 @@
 
 [node name="PopupDialog" type="PopupDialog"]
 pause_mode = 2
-anchor_right = 0.243
-anchor_bottom = 0.194
-margin_right = -155.52
-margin_bottom = -69.84
-popup_exclusive = true
+margin_left = -1.0
+margin_top = 1.0
+margin_right = 317.0
+margin_bottom = 129.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 200.0
-margin_bottom = 41.0
+[node name="TextBox" type="ColorRect" parent="."]
+margin_left = 18.0
+margin_top = 12.0
+margin_right = 301.0
+margin_bottom = 114.0
 color = Color( 0.960784, 1, 0.905882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameTag" type="Label" parent="TextBox"]
+margin_left = 6.13754
+margin_top = 7.94556
+margin_right = 206.138
+margin_bottom = 21.9456
+custom_colors/font_color = Color( 0.109804, 0.301961, 0.682353, 1 )
+text = "This is the default name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogue" type="Label" parent="TextBox"]
+margin_left = 6.02002
+margin_top = 32.0193
+margin_right = 206.02
+margin_bottom = 73.0193
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "This is default text, if you see this then you're doing something wrong."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

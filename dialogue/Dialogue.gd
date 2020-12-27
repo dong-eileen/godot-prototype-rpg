@@ -1,6 +1,5 @@
 extends PopupDialog
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_process_input(false);
@@ -21,6 +20,8 @@ func _input(event):
 		close();
 		get_tree().set_input_as_handled();
 
-func _on_openDialogue():
+func _on_openDialogue(dialogue):
+	print(dialogue);
+	get_node("TextBox/Dialogue").text = dialogue;
 	open();
 	

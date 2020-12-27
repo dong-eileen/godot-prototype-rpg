@@ -43,6 +43,7 @@ format = 1
 "NPCs",
 ] instance=ExtResource( 1 )]
 position = Vector2( 98.1095, 91.8661 )
+dialogue = "hi there!"
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="NpcOne"]
 frames = SubResource( 5 )
@@ -54,10 +55,8 @@ shape = SubResource( 6 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 93.3526, 0.297302 )
 
-[node name="Dialogue" parent="." instance=ExtResource( 4 )]
+[node name="PopupDialog" parent="." instance=ExtResource( 4 )]
 visible = true
-margin_left = 2.37842
-margin_top = 118.326
-margin_right = 2.37842
-margin_bottom = 118.326
-[connection signal="openDialogue" from="NpcOne" to="Dialogue" method="_on_openDialogue"]
+margin_top = 126.858
+margin_bottom = 254.858
+[connection signal="openDialogue" from="NpcOne" to="PopupDialog" method="_on_openDialogue"]
