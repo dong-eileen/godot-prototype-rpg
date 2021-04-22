@@ -29,3 +29,11 @@ func _input(event):
 func _physics_process(_delta):
 	get_movement()
 	velocity = move_and_slide(velocity)
+	
+func _on_message_requested():
+	set_process_input(false);
+	set_physics_process(false)
+
+func _on_message_finished():
+	set_process_input(true);
+	set_physics_process(true)

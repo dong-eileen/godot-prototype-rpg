@@ -1,9 +1,9 @@
 extends StaticBody2D
 
-signal openDialogue
+signal message_requested;
 
 export(SpriteFrames) var sprite;
-export(String) var dialogue;
+export(Resource) var dialogue;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,4 +11,4 @@ func _ready():
 
 
 func interact():
-	emit_signal('openDialogue', dialogue)
+	emit_signal('message_requested')
