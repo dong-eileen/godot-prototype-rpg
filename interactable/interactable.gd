@@ -11,4 +11,4 @@ func _ready():
 
 
 func interact():
-	emit_signal('message_requested')
+	emit_signal('message_requested', get_node("DialoguePosition").position) #TODO: refactor this baby so the Player logic is less confusing

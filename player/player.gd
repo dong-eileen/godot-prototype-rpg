@@ -30,7 +30,7 @@ func _physics_process(_delta):
 	get_movement()
 	velocity = move_and_slide(velocity)
 	
-func _on_message_requested():
+func _on_message_requested(position):
 	set_process_input(false);
 	set_physics_process(false)
 

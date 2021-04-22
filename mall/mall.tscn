@@ -68,12 +68,14 @@ position = Vector2( 98.1095, 91.8661 )
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="NpcOne"]
 frames = SubResource( 6 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NpcOne"]
 position = Vector2( -0.297302, 3.56762 )
 shape = SubResource( 7 )
+
+[node name="DialoguePosition" type="Position2D" parent="NpcOne"]
+position = Vector2( 4.20447, 105.953 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 93.3526, 0.297302 )
