@@ -70,7 +70,6 @@ dialogue = ExtResource( 5 )
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="NpcOne"]
 frames = SubResource( 7 )
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NpcOne"]
