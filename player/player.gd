@@ -20,17 +20,14 @@ func _input(event):
 	if(event.is_action_pressed("ui_accept")):
 		var target = $RayCast2D.get_collider();
 		if (target != null && target.is_in_group("NPCs")):
-			print("We found a vulnerable NPC!");
 			target.interact();
 			get_tree().set_input_as_handled();
-		else:
-			print("You're a dum dum.")
 
 func _physics_process(_delta):
 	get_movement()
 	velocity = move_and_slide(velocity)
 	
-func _on_message_requested(position):
+func _on_message_requested(dialogue, position):
 	set_process_input(false);
 	set_physics_process(false)
 
