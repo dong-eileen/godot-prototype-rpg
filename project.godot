@@ -10,12 +10,18 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Resource",
-"class": "DialogueStructure",
+"class": "DialogueNode",
 "language": "GDScript",
-"path": "res://dialogue/dialogue_structure.gd"
+"path": "res://dialogue/dialogue_node.gd"
+}, {
+"base": "Resource",
+"class": "DialogueTree",
+"language": "GDScript",
+"path": "res://dialogue/dialogue_tree.gd"
 } ]
 _global_script_class_icons={
-"DialogueStructure": ""
+"DialogueNode": "",
+"DialogueTree": ""
 }
 
 [application]

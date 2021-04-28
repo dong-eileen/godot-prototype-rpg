@@ -4,7 +4,7 @@ const DialogueGui = preload("res://dialogue/dialogue.tscn");
 
 signal message_finished;
 
-var dialogue: DialogueStructure;
+var dialogue: DialogueTree;
 var is_open = false;
 var dialogue_gui_instance;
 
@@ -23,8 +23,7 @@ func close():
 func show_message():
 	#get_tree().set_pause(true);
 	#set_process_input(true);
-	dialogue_gui_instance.set_text(dialogue.get_curr_dialogue());
-	dialogue.next()
+	dialogue_gui_instance.set_text(dialogue.next());
 	is_open = true;
 	
 func _input(event):
@@ -35,7 +34,7 @@ func _input(event):
 			close();
 		get_tree().set_input_as_handled();
 
-func _on_message_requested(dialogue_tree: DialogueStructure, position: Vector2):
+func _on_message_requested(dialogue_tree: DialogueTree, position: Vector2):
 	dialogue = dialogue_tree;
 	dialogue_gui_instance = DialogueGui.instance();
 	get_tree().get_root().add_child(dialogue_gui_instance);
