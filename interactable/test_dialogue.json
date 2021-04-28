@@ -1,0 +1,2 @@
+{"id": 1, "text": "this is text from a json!", "nextNodes": [2], "action": "", "speaker": "Me"}
+{"id": 2, "text": "how's the weather today?", "nextNodes": [], "action": "", "speaker": "Me"}

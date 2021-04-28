@@ -32,5 +32,6 @@ func _on_message_requested(dialogue, position):
 	set_physics_process(false)
 
 func _on_message_finished():
+	## instead of this back-and-forth, we could probably extract this into a singleton?
 	set_process_input(true);
 	set_physics_process(true)

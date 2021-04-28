@@ -1,10 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://interactable/interactable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://player/spritesheet_player.png" type="Texture" id=3]
 [ext_resource path="res://dialogue/dialogue_manager.tscn" type="PackedScene" id=4]
-[ext_resource path="res://mall/custom_dialogue.tres" type="Resource" id=5]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends TileMap
@@ -66,10 +65,11 @@ script = SubResource( 1 )
 "NPCs",
 ] instance=ExtResource( 1 )]
 position = Vector2( 98.1095, 91.8661 )
-dialogue = ExtResource( 5 )
+dialogue_file_path = "res://interactable/test_dialogue.json"
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="NpcOne"]
 frames = SubResource( 6 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NpcOne"]
@@ -83,6 +83,7 @@ position = Vector2( 4.20447, 105.953 )
 position = Vector2( 93.3526, 0.297302 )
 
 [node name="DialogueManager" parent="." instance=ExtResource( 4 )]
-[connection signal="message_requested" from="NpcOne" to="Player" method="_on_message_requested"]
+
 [connection signal="message_requested" from="NpcOne" to="DialogueManager" method="_on_message_requested"]
+[connection signal="message_requested" from="NpcOne" to="Player" method="_on_message_requested"]
 [connection signal="message_finished" from="DialogueManager" to="Player" method="_on_message_finished"]

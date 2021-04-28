@@ -6,7 +6,7 @@ signal message_finished;
 
 var dialogue: DialogueTree;
 var is_open = false;
-var dialogue_gui_instance;
+var dialogue_gui_instance: Node;
 
 func _ready():
 	set_process_input(true);

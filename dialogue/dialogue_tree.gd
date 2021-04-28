@@ -1,12 +1,11 @@
 extends Resource
 class_name DialogueTree
 
+# array<DialogueNode>
 export(Array) var dialogue setget set_dialogue
 var curr_position = 0
 
-func _ready():
-	pass # Replace with function body.
-
+# array<DialogueNode>
 func set_dialogue(input: Array):
 	dialogue = input;
 		
@@ -15,9 +14,9 @@ func has_next():
 	
 func next():
 	if (curr_position < len(dialogue)):
-		var curr_dialogue = dialogue[curr_position];
+		var curr_dialogue: DialogueNode = dialogue[curr_position];
 		curr_position += 1;
-		return curr_dialogue;
+		return curr_dialogue.text;
 	else:
 		return null;
 
