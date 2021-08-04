@@ -69,7 +69,7 @@ dialogue_file_path = "res://interactable/test_dialogue.json"
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="NpcOne"]
 frames = SubResource( 6 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NpcOne"]
@@ -84,6 +84,6 @@ position = Vector2( 93.3526, 0.297302 )
 
 [node name="DialogueManager" parent="." instance=ExtResource( 4 )]
 
-[connection signal="message_requested" from="NpcOne" to="DialogueManager" method="_on_message_requested"]
 [connection signal="message_requested" from="NpcOne" to="Player" method="_on_message_requested"]
+[connection signal="message_requested" from="NpcOne" to="DialogueManager" method="_on_message_requested"]
 [connection signal="message_finished" from="DialogueManager" to="Player" method="_on_message_finished"]

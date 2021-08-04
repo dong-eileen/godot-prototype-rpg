@@ -23,7 +23,11 @@ func close():
 func show_message():
 	#get_tree().set_pause(true);
 	#set_process_input(true);
-	dialogue_gui_instance.set_text(dialogue.next());
+	var next_dialogue = dialogue.next();
+	if (next_dialogue.size() == 1):
+		dialogue_gui_instance.set_text(next_dialogue[0]);
+	else:
+		dialogue_gui_instance.set_text("placeholder for displaying options")
 	is_open = true;
 	
 func _input(event):

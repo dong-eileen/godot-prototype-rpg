@@ -29,14 +29,14 @@ func _ready() -> void:
 func parse_dialogue_file() -> void:
 	var file = File.new()
 	file.open(dialogue_file_path, File.READ)
-	var all_dialogue: Array
+	var all_dialogue: Dictionary #<DialogueNode>
 	while (not file.eof_reached()):
 		var line: String = file.get_line();
 		if (line.empty()):
 			continue;
 		var parsed_line: Dictionary = JSON.parse(line).result
 		var dialogue_node: DialogueNode = DialogueNode.new(parsed_line.get(ID), parsed_line.get(SPEAKER), parsed_line.get(TEXT), parsed_line.get(NEXT_NODES), parsed_line.get(ACTION))
-		all_dialogue.append(dialogue_node)
+		all_dialogue[dialogue_node.id] = dialogue_node
 	dialogue_tree.dialogue = all_dialogue
 	file.close();
 

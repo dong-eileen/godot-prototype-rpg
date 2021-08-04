@@ -1,2 +1,6 @@
 {"id": 1, "text": "this is text from a json!", "nextNodes": [2], "action": "", "speaker": "Me"}
-{"id": 2, "text": "how's the weather today?", "nextNodes": [], "action": "", "speaker": "Me"}
+{"id": 2, "text": "how's the weather today?", "nextNodes": [3, 4], "action": "", "speaker": "Me"}
+{"id": 3, "text": "good", "nextNodes": [5], "action": "", "speaker": "Me"}
+{"id": 4, "text": "bad", "nextNodes": [6], "action": "", "speaker": "Me"}
+{"id": 5, "text": "that's nice", "nextNodes": [], "action": "", "speaker": "Me"}
+{"id": 6, "text": "HOW DARE YOU", "nextNodes": [], "action": "", "speaker": "Me"}
